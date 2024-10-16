@@ -6,22 +6,22 @@ const EventGallery = () => {
     {
       key: 1,
       title: 'BABY SHOWER',
-      imageSrc:  "/images/diwali-collection.jpeg",
+      imageSrc:  "/images/babyshower.jpg",
     },
     {
       key: 2,
       title: "KIDS' BIRTHDAYS",
-      imageSrc: "/images/halloween-collection.jpeg",
+      imageSrc: "/images/kidsbirthday.jpg",
     },
     {
       key: 3,
       title: 'CASUAL GET-TOGETHER',
-      imageSrc:  "/images/diwali-collection.jpeg",
+      imageSrc:  "/images/gettogether.jpg",
     },
     {
       key: 4,
       title: 'CORPORATE EVENTS',
-      imageSrc:  "/images/diwali-collection.jpeg",
+      imageSrc:  "/images/food.png",
     },
   ];
 
