@@ -62,13 +62,13 @@ const HaflaExperience = () => {
 
       {/* Table Header */}
       <Row gutter={0} style={{ marginBottom: '20px' }}>
-        <Col xs={24} sm={24} md={6}>
+        <Col xs={8} sm={8} md={6}>
           <div style={{ height: '100%' }}></div>
         </Col>
-        <Col xs={24} sm={12} md={9}>
+        <Col xs={8} sm={8} md={9}>
           <div style={leftTitleStyle}>THE HAFLA EXPERIENCE</div>
         </Col>
-        <Col xs={24} sm={12} md={9}>
+        <Col xs={8} sm={8} md={9}>
           <div style={rightTitleStyle}>A TYPICAL EXPERIENCE</div>
         </Col>
       </Row>
@@ -81,7 +81,7 @@ const HaflaExperience = () => {
           typical: ['Uncertain quality', 'Hidden costs'],
         },
         {
-          label: 'CONVENIENCE',
+          label: 'Benefit',
           hafla: ['Free event planning consultation', 'Personalized experience'],
           typical: ['Limited inventory', 'Little guidance & support'],
         },
@@ -97,17 +97,17 @@ const HaflaExperience = () => {
         },
       ].map((row, index) => (
         <Row key={index} gutter={0} style={rowStyle}>
-          <Col xs={24} sm={6} style={headerColStyle}>
+          <Col xs={8} sm={8} md={6} style={headerColStyle}>
             {row.label}
           </Col>
-          <Col xs={24} sm={12} md={9}>
+          <Col xs={8} sm={8} md={9}>
             <ul>
               {row.hafla.map((item, i) => (
                 <li key={i}>{item}</li>
               ))}
             </ul>
           </Col>
-          <Col xs={24} sm={12} md={9}>
+          <Col xs={8} sm={8} md={9}>
             <ul>
               {row.typical.map((item, i) => (
                 <li key={i}>{item}</li>

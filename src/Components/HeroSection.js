@@ -4,7 +4,7 @@ import { SearchOutlined } from '@ant-design/icons';
 
 const HeroSection = () => {
   const backgroundStyle = {
-    backgroundImage: 'url("/images/mobile-banner.jpg")',
+    backgroundImage: 'url("/images/background.jpg")',
 
     backgroundSize: 'cover',
     backgroundPosition: 'center',
