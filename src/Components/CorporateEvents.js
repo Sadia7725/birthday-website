@@ -10,7 +10,7 @@ const CorporateEvents = () => {
     },
     {
       key: 2,
-      imageSrc: "/images/halloween-collection.jpeg",
+      imageSrc: "/images/gettogether.png",
       title: "Equipment & Furniture",
     },
     {
@@ -21,23 +21,17 @@ const CorporateEvents = () => {
   ];
 
   return (
-    <div style={{ padding: '20px', textAlign: 'center' }}>
-      <h2 style={{ fontSize: '2rem', marginBottom: '10px' }}>
+    <div style={styles.container}>
+      <h2 style={styles.subtitle}>
         Book everything you need for your business events.
       </h2>
-      <h1 style={{ fontSize: '3rem', fontWeight: 'bold', marginBottom: '20px' }}>
-        CORPORATE EVENTS <span style={{ color: 'linear-gradient(to right, orange, pink)' }}>—</span>
+      <h1 style={styles.title}>
+        CORPORATE EVENTS <span style={styles.separator}>—</span>
       </h1>
       <Button
         type="primary"
         size="large"
-        style={{
-          background: 'linear-gradient(to right, orange, pink)',
-          border: 'none',
-          borderRadius: '20px',
-          padding: '0 40px',
-          marginBottom: '40px',
-        }}
+        style={styles.button}
       >
         CONSULT EVENT EXPERT
       </Button>
@@ -65,21 +59,60 @@ const CorporateEvents = () => {
                   }}
                 />
               }
-              style={{
-                width: '100%',
-                maxWidth: '350px',
-                borderRadius: '50% 50% 0 0',
-                textAlign: 'center',
-                boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.1)',
-              }}
+              style={styles.card}
             >
-              <h3 style={{ fontSize: '18px', fontWeight: 'bold' }}>{event.title}</h3>
+              <h3 style={styles.cardTitle}>{event.title}</h3>
             </Card>
           </Col>
         ))}
       </Row>
     </div>
   );
+};
+
+const styles = {
+  container: {
+    padding: '20px',
+    textAlign: 'center',
+    background: 'linear-gradient(to right, #F02FC2, #6094EA)', // Radiant background
+    borderRadius: '10px', // Optional: rounded corners
+    boxShadow: '0 4px 10px rgba(0, 0, 0, 0.2)', // Optional: shadow for depth
+  },
+  subtitle: {
+    fontSize: '2rem',
+    marginBottom: '10px',
+    color: 'white',
+  },
+  title: {
+    fontSize: '3rem',
+    fontWeight: 'bold',
+    marginBottom: '20px',
+    color: 'white',
+  },
+  separator: {
+    color: 'linear-gradient(to right, orange, pink)', // Use gradient for the separator
+  },
+  button: {
+    background: 'linear-gradient(to right, orange, pink)',
+    border: 'none',
+    borderRadius: '20px',
+    padding: '0 40px',
+    marginBottom: '40px',
+  },
+  card: {
+    width: '100%',
+    maxWidth: '350px',
+    borderRadius: '50% 50% 0 0',
+    textAlign: 'center',
+    boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.1)', 
+    background: 'linear-gradient(to right, #F02FC2, #6094EA)',
+    
+  },
+  cardTitle: {
+    fontSize: '18px',
+    fontWeight: 'bold',
+    color: 'white',
+  },
 };
 
 export default CorporateEvents;

@@ -11,6 +11,7 @@ import EventGallery from './Components/EventGallery';
 import WhyChooseHafla from './Components/WhyChooseHafla';
 import HaflaExperience from './Components/HaflaExperience';
 import ClientsSection from './Components/ClientsSection';
+import HowItWorks from './Components/HowItWorks';
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
      <WhyChooseHafla/>
      <HaflaExperience/>
    <ClientsSection/>
+   <HowItWorks/>
       <Footer />
     </div>
   );

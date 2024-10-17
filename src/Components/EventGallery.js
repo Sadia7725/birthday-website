@@ -6,7 +6,7 @@ const EventGallery = () => {
     {
       key: 1,
       title: 'BABY SHOWER',
-      imageSrc:  "/images/babyshower.jpg",
+      imageSrc: "/images/babyshower.png",
     },
     {
       key: 2,
@@ -16,21 +16,21 @@ const EventGallery = () => {
     {
       key: 3,
       title: 'CASUAL GET-TOGETHER',
-      imageSrc:  "/images/gettogether.jpg",
+      imageSrc: "/images/gettogether.png",
     },
     {
       key: 4,
       title: 'CORPORATE EVENTS',
-      imageSrc:  "/images/food.png",
+      imageSrc: "/images/corporate.png",
     },
   ];
 
   return (
-    <div style={{ padding: '40px', textAlign: 'center' }}>
-      <h3 style={{ fontSize: '24px', marginBottom: '10px' }}>A tour of events we have executed.</h3>
-      <h1 style={{ fontSize: '36px', fontWeight: 'bold', marginBottom: '30px' }}>
+    <div style={styles.container}>
+      <h3 style={styles.subtitle}>A tour of events we have executed.</h3>
+      <h1 style={styles.title}>
         A GLIMPSE INTO OUR EVENTS{' '}
-        <span style={{ color: 'linear-gradient(to right, orange, pink)' }}>—</span>
+        <span style={styles.separator}>—</span>
       </h1>
       <Row gutter={[16, 16]} justify="center">
         {eventData.map(event => (
@@ -43,27 +43,60 @@ const EventGallery = () => {
           >
             <Card
               hoverable
+              style={styles.card} 
               cover={
-                <div style={{ position: 'relative' }}>
+                <div style={{ position: 'relative',  borderRadius: '10px' }}>
                   <img
                     alt={event.title}
                     src={event.imageSrc}
                     style={{ height: '300px', objectFit: 'cover', borderRadius: '10px' }}
                   />
-                
                 </div>
               }
-           
             >
-              <h3 style={{ fontSize: '16px', fontWeight: 'bold', marginTop: '10px' }}>
-                {event.title}
-              </h3>
+              <h3 style={styles.cardTitle}>{event.title}</h3>
             </Card>
           </Col>
         ))}
       </Row>
     </div>
   );
+};
+
+const styles = {
+  container: {
+    padding: '40px',
+    textAlign: 'center',
+    background: 'linear-gradient(to right, #e233ff, #feb47b)', 
+  },
+  subtitle: {
+    fontSize: '18px',
+    marginBottom: '10px',
+    color:'white',
+  },
+  title: {
+    fontSize: '28px',
+    fontWeight: 'bold',
+    marginBottom: '30px',
+    color:'white',
+  },
+  separator: {
+    borderBottom: '2px solid #FF6347', // Orange separator line
+    display: 'inline-block',
+    width: '50px',
+    marginLeft: '10px',
+  },
+  card: {
+    background: 'linear-gradient(to right, #e233ff, #feb47b)',
+    borderRadius: '10px',
+    color: 'white', 
+  },
+  cardTitle: {
+    fontSize: '16px',
+    fontWeight: 'bold',
+    marginTop: '10px',
+    textAlign: 'center',
+  },
 };
 
 export default EventGallery;
